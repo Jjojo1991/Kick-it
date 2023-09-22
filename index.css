@@ -1,0 +1,629 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+html{
+    overscroll-behavior-inline: contain;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next' , 'Gill Sans','Trebuchet MS', sans-serif;
+    background-color:#fefaed;
+}
+
+
+header { 
+    min-height: 30vh;
+    margin: 0;
+}
+
+.navbar{
+    margin:3rem  4rem;
+    display: grid;
+    grid-template-columns: [first] 1fr [line2] 1fr [line3] 1fr [end];
+    grid-gap: 20px;
+}
+
+.navbar-flex {
+    width: 100%;
+    margin: 20px 10px;
+}
+
+/*  ============
+    nav section 
+    =========== */
+
+
+
+.nav-ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-right: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 1px;
+
+}
+
+.nav-ul-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-div > .logo > img {
+    width: 100px;
+}
+
+.logo-div > .logo > img:hover {
+    width: 100px;
+}
+
+.nav-ul-1  {
+    margin-left: 10rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+
+.nav-list-svg > img {
+    width: 2rem;
+    margin: 10px;
+}
+
+.navbar ul, 
+.navbar li {
+    margin:0;
+    padding: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.navbar li {
+    float: left;
+    position: relative;
+    width: auto;  
+}
+
+.navbar a {
+    margin: 10px;
+    transition: all 0.20s ease;
+}
+
+.navbar li:hover  { 
+    background-color: #D04F2C;
+ }
+
+.nav-sublist {
+    right: 150px;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul.nav-sublist {
+    opacity: 1;
+    visibility: visible;
+    top: 55px;
+    width: 100px;
+}
+
+.nav-sublist li{
+    float: none;
+    width: 250px;
+    height: 60px;
+    padding: 20px 0 20px 15px;
+    border-bottom: solid 0.5px #D04F2C;
+    background-color: #fefaed;
+}
+
+
+.nav-ul > li:hover { 
+   cursor: pointer;
+   margin:0 5px;
+   background-color: #D04F2C;
+   color: cornsilk;
+   transition: 0.2s;
+}
+
+.nav-ul > li:focus { 
+    cursor: pointer;
+    margin:0  5px;
+    background-color: #D04F2C;
+    color: cornsilk;
+ }
+
+
+
+
+.title-quote > h1 {
+    padding: 10rem 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 65vw;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #353535;
+}
+
+.ferguson {
+    font-size: 2.3rem;
+    margin-left: 20px;
+    font-style: italic;
+    color: #D04F2C;
+}
+
+.ferguson::before {
+    content: '– ';
+    font-size: 3.5rem;
+}
+
+.ferguson::after {
+    content: ' –';
+    font-size: 3.5rem;
+}
+
+
+/*  ============
+        Main
+    =========== */
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.retro-section {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items:center;
+    gap: 10px;
+}
+
+.retro-kits-img  {
+    position: relative;
+  
+}
+
+.retro-kits-img > img {
+    object-fit: cover;
+    width: 100%;
+    cursor: pointer;
+}
+
+.retro-kits-img > .name-price {
+   position: absolute;
+   top: 70%;
+   width: 100%;
+   text-align: center;
+   color: cornsilk;
+   opacity: 0;
+}
+
+.retro-kits-img > .name-price > h2 {
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   font-family: 'DIN Condensed', Times, serif;
+   text-shadow: 1px 1px 1px #bbb7b7, 0 0 0.2em #bdb5b5;
+}
+
+
+.text-kits {
+    color: #80a2b0;
+}
+
+
+.text-red {
+    color: #D04F2C;
+}
+
+
+
+ /*  ============
+     Hover image
+    =========== */
+
+ .retro-kits-img:hover .name-price {
+    opacity: 1;
+  }
+
+.retro-kits-img > img:hover {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+img,
+.name-price {
+    transition: 0.25s all;
+}
+
+/*  ============
+        Footer
+    =========== */
+footer {
+    width: 100%;
+    background-color: #65a9c3;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: bottom;
+}
+
+.bottom-section {
+    width: 83vw;
+    margin: 0 auto;  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5rem;
+}
+
+.bottom-section-container > h2 {
+    font-size:1.5rem ;
+    text-align: left;
+}
+
+.bottom-section-container > h3 {
+    font-weight:600 ;
+}
+
+.bottom-section-container > p {
+    line-height: 1.5;
+}
+
+.letterspace-bottom-p {
+    margin-top: 4rem;
+}
+
+.bottom-section-1 {
+    grid-gap: 5rem;
+    width: 83vw;
+    margin: 1rem auto;  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+h2 {
+    font-size:2rem ;
+    text-align: center;
+    margin: auto;
+}
+
+
+h2 > a {
+   display: block;
+   color: #ffffffe3;
+   cursor: pointer;
+}
+
+h2 > a:hover {
+    color: #ffffff;
+    opacity: .7;
+ }
+
+ .icon-footer {
+    display: flex;
+    padding-bottom: 7px;
+    text-align: left;
+
+ }
+
+ .icon-footer > h2 {
+    font-size: 1.5rem;
+    text-align: left;
+ }
+
+ .icon-footer > p {
+    padding-left: 10px; 
+ }
+
+ .icon-footer > img {
+    width: 1.5rem;   
+ }
+
+ .img-top {
+    display: flex;
+    padding-bottom: 7px;
+ }
+ .img-top > h2 {
+    font-size: 1.5rem;
+    text-align: left;
+ }
+
+ .img-top > img  {
+    width: 1.5rem;   
+    margin-top: -40px;
+ }
+ 
+
+
+/*  ============
+      Buy Now
+    =========== */
+.homepage-kits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*  ============
+      #1 section
+    =========== */
+#all-kits-section {
+    min-height: 65vh;
+    background-color:#5eacc3;
+    position: relative;
+}
+
+main > .greenbar {
+    width: 100%;
+    height: 4rem;
+    background-color: #80d1e9;
+}
+.image-kit-content {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 12rem;
+}
+
+.text-kit-content > h1 {
+    padding: 4rem 0 0 4rem;
+    color: #ade111;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.buy-here {
+    padding-left: 4rem;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.image-kit-content > img {
+    width: 19vw;
+    padding-right: 1rem;
+}
+
+.video-section {
+    min-height: 65vh;
+    background-color:#f24c1a;
+    position: relative;
+    margin: 3rem 0;
+    width: 100%;
+
+}
+
+.video-section > iframe {
+    position: absolute;
+    right: 12rem;
+    bottom: 0;
+}
+
+.video-section-text {
+    inline-size: 35rem; 
+    padding: 4rem 0 0 4rem;
+}
+
+
+.video-section-text > h1  {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 1rem;
+    
+}
+
+.video-section-text > p  {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color:whitesmoke;   
+}
+
+
+
+/*  ============
+    #1 Scroll section
+    =========== */
+    #yellow-scroll-section {
+        background-color: #80d1e9;
+    }
+    
+    .scroll-container-shirts {
+        padding:2rem 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 20%;
+        gap: 1rem;
+    
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+      }
+    
+    
+    .shirt-content  {
+        padding: 1rem;
+        background-color: #ace11b91;
+        position: relative;
+    }
+    
+    .shirt-content > img {
+        object-fit: cover;
+        inline-size: 100%;
+        aspect-ratio: 16/20;
+}
+
+    
+      .shirt-content > p {
+       color: #273f46;
+       font-size: 1rem; /* Example font size using relative unit */
+      } 
+    
+      .shirt-content > .heart {
+        width: 1.6rem;
+        position: absolute;
+        background: #D04F2C;
+        color: aliceblue;
+        right: 20px;
+        outline: 0.3rem solid #D04F2C;
+        top: 1.5rem;
+        }
+    
+        .shirt-content > .heart:hover {
+            background: #983c23;
+            outline: 0.3rem solid #983c23;
+            }
+    
+            
+        img.shirts-grey {
+          filter: brightness(140%);
+        }
+
+    /* =========
+    Media queries 
+   ========== */
+@media screen and (min-width: 320px) {
+    body {
+        background-color:#e9bb22;
+    }
+
+    .title-quote > h1 {
+        font-size: 1.6rem;
+    }
+
+    .retro-section {
+       display: block;
+    }
+
+
+}
+
+
+@media screen and (min-width:760px) {
+    body {
+        background-color:#e92272;
+    }
+
+    .retro-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+     }
+
+
+     .title-quote > h1 {
+        font-size: 2.1rem;
+    }
+
+
+    /*==============
+        Second page
+    ===============*/
+
+    .video-section > * {
+       display: block;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color:#2f22e9;
+        
+    }
+
+    .retro-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+     }
+
+}
+
+
+
+
+/*  ============
+      #2 section
+    =========== */
+    #all-kits-section-red {
+        min-height: 65vh;
+        background-color:#0d451f;
+        position: relative;
+    }
+    
+    main > .purplebar {
+        width: 100%;
+        height: 4rem;
+        background-color: #197b38;
+    }
+
+    .image-kit-content-2 {
+        position: absolute;
+        bottom: -6px;
+        right: 12rem;
+    }
+
+
+    .image-kit-content-2 > img {
+        width: 60vw;
+    }
+
+    /*  ============
+      Scroll section #2
+    =========== */
+
+     #blue-scroll-section {
+        background-color: #197b38;
+    }
+    
+    
+    .blue-shirt-content  {
+        padding: 1rem;
+        background-color: #59b5764d;
+        position: relative;
+    }
+    
+    .blue-shirt-content > img {
+        object-fit: cover;
+        inline-size: 100%;
+        aspect-ratio: 16/20;
+      }
+    
+      .blue-shirt-content > p {
+       color: #eff5f1;
+      } 
+    
+      .blue-shirt-content > .heart {
+        width: 1.6rem;
+        position: absolute;
+        background: #D04F2C;
+        color: aliceblue;
+        right: 20px;
+        outline: 0.3rem solid #D04F2C;
+        top: 1.5rem;
+        }
+    
+    .blue-shirt-content > .heart:hover {
+            background: #983c23;
+            outline: 0.3rem solid #983c23;
+            }
