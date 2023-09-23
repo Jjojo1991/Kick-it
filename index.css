@@ -503,7 +503,7 @@ main > .greenbar {
     /* =========
     Media queries 
    ========== */
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 400px) {
     body {
         background-color:#e9bb22;
     }
